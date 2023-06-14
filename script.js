@@ -1,4 +1,4 @@
-let dataCompany = document.querySelectorAll('.dataValue');
+const [companyName, adressStreet, adressNumber, adressDistrict, adressCity, adressState, adressZipCode, adressTel] = document.querySelectorAll('.dataValue');
 
 
 const handleZipCode = (event) => {
@@ -42,17 +42,13 @@ function closeWindow() {
 }
 
 
-function getData(array){
-    array.forEach(element => {
-        console.log(element.value)
-    });
-}
-function registerProduct() {
+function getData(){
+    console.log(companyName.value)
+
 
 }
-
 
 
 function generatePDF(){
-    console.log(getData(dataCompany))
+    getData()
 }
