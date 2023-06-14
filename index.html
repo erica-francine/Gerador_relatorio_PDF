@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Devolução</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="date"></div>
+    <h2 class="title">Carta de Devolução de Mercadorias</h1>
+        <div class="content">
+            <div class="dataCompany">
+
+                <table id="tableDataCompany" class="table">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="data">Nome Fornecedor: </p>
+                        </td>
+                        <td>
+                            <input type="text" class="dataValue">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <p class="data">Endereço </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="data">Rua: </p>
+                        </td>
+                        <td>
+                            <input type="text" class="dataValue">
+                        </td>
+                        <td>
+                            <p class="data">Número: </p>
+                        </td>
+                        <td>
+                            <input type="text" class="dataValue">
+                        </td>
+                        <td>
+                            <p class="data">Bairro: </p>
+                        </td>
+                        <td>
+                            <input type="text" class="dataValue">
+                        </td>
+
+                    </tr>
+                                          
+                    <tr>
+                        
+                        <tr>
+                            <td>
+                                <p class="data">Cidade: </p>
+                            </td>
+                            <td>
+                                <input class="dataValue" type="text" >
+                            </td>
+                            <td>
+                                <p class="data">Estado: </p>
+                            </td>
+                            <td>
+                                <input type="text" class="dataValue">
+                            </td>
+                            <td>
+                                <p class="data">CEP: </p>
+                            </td>
+                            <td>
+                                <input class="dataValue" type="text" maxlength="9" onkeyup="handleZipCode(event)" />
+                            </td>
+                            <td>
+                                <p class="data">Telefone: </p>
+                            </td>
+                            <td>
+                                <input class="dataValue" type="tel" maxlength="15" onkeyup="handlePhone(event)" />
+                            </td>
+
+                    </tr>
+
+                </table>
+
+                
+            </div>
+
+            <div class="products">
+                <h2>Produtos</h2>
+                <button onclick="insertProduct()">Inserir Produto</button>
+
+            </div>
+            <button onclick="generatePDF()">Gerar PDF</button>
+        </div>
+
+        <script src="./script.js"></script>
+</body>
+
+</html>
