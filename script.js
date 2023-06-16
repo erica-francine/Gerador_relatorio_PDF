@@ -1,6 +1,5 @@
 const [companyName, adressStreet, adressNumber, adressDistrict, adressCity, adressState, adressZipCode, adressTel] = document.querySelectorAll('.dataValue');
 
-
 const handleZipCode = (event) => {
     let input = event.target
     input.value = zipCodeMask(input.value)
