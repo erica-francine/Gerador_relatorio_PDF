@@ -51,3 +51,4 @@ function getData(){
 function generatePDF(){
     getData()
 }
+
